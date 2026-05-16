@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Great Commission – Matthew 28 | గొప్ప ఆజ్ఞ</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:wght@300;400;600&family=Noto+Serif+Telugu:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --deep: #1A1208;
+    --parchment: #F5EDD8;
+    --text: #2C1A0A;
+    --muted: #7A6040;
+    --accent: #8B2A0A;
+    --col-border: rgba(201,168,76,0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--deep);
+    color: var(--parchment);
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(170deg, #0e0904 0%, #2a1508 60%, #1a0e05 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 60px 20px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center top, rgba(201,168,76,0.12) 0%, transparent 70%);
+  }
+  .hero-cross { font-size: 2rem; color: var(--gold); letter-spacing: 6px; margin-bottom: 14px; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: var(--gold);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .hero h1 span {
+    display: block;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: clamp(1.3rem, 3.5vw, 2rem);
+    color: #d4b86a;
+    margin-top: 4px;
+  }
+  .hero .ref { font-size: 0.9rem; color: var(--muted); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+  .hero .key-verse {
+    max-width: 800px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid var(--col-border);
+    background: rgba(201,168,76,0.05);
+  }
+  .hero .key-verse .kv-en, .hero .key-verse .kv-te {
+    padding: 16px 22px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #e8d9b0;
+    text-align: left;
+  }
+  .hero .key-verse .kv-te {
+    font-family: 'Noto Serif Telugu', serif;
+    font-style: normal;
+    border-left: 2px solid var(--col-border);
+    color: #d4c090;
+  }
+  .hero .key-verse small { display: block; color: var(--muted); font-size: 0.8rem; margin-top: 6px; font-style: normal; }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* ── BILINGUAL SPLIT ── */
+  .bi-section {
+    padding: 48px 0 16px;
+  }
+  .bi-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--col-border);
+    margin-bottom: 28px;
+  }
+  .bi-header .bh-en, .bi-header .bh-te {
+    padding: 10px 0 10px;
+  }
+  .bi-header .bh-te { padding-left: 28px; border-left: 2px solid var(--col-border); }
+  .section-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 3px 12px;
+    margin-bottom: 10px;
+  }
+  .bi-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    color: #e8d9b0;
+    line-height: 1.3;
+  }
+  .bi-header h2.te {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    color: #d4c090;
+  }
+
+  /* ── SPLIT ROW ── */
+  .split-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+  .col-en { padding: 0 28px 0 0; color: #d4c5a0; }
+  .col-te {
+    padding: 0 0 0 28px;
+    border-left: 2px solid var(--col-border);
+    color: #c8b888;
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+  .col-en p, .col-te p { margin-bottom: 14px; }
+  .col-en strong { color: #e8d9b0; }
+
+  /* ── GENESIS TABLE ── */
+  .genesis-section {
+    padding: 48px 0 24px;
+  }
+  .genesis-header {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 12px;
+    margin-bottom: 0;
+  }
+  .genesis-header div { padding: 0 20px 0 0; }
+  .genesis-header div:last-child { padding-left: 20px; border-left: 2px solid var(--col-border); padding-right: 0; }
+  .genesis-header .section-label { display: block; margin-bottom: 8px; }
+  .genesis-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    color: #e8d9b0;
+  }
+  .genesis-header h2.te {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: #d4c090;
+  }
+
+  .gen-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+  .gen-row:hover { background: rgba(201,168,76,0.04); }
+  .gen-en, .gen-te {
+    padding: 18px 20px 18px 0;
+  }
+  .gen-te {
+    padding-left: 20px;
+    border-left: 2px solid var(--col-border);
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 0.98rem;
+    line-height: 1.9;
+    color: #c8b888;
+    padding-right: 0;
+  }
+  .gen-en { color: #d4c5a0; }
+  .gen-chapter {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .gen-en ul, .gen-te ul { list-style: none; }
+  .gen-en ul li::before { content: "· "; color: var(--gold); }
+  .gen-te ul li::before { content: "· "; color: var(--gold); }
+  .gen-en ul li, .gen-te ul li { margin-bottom: 4px; }
+
+  /* ── POINTS ── */
+  .points { list-style: none; margin: 20px 0; }
+  .points li {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    margin-bottom: 16px;
+    border-left: 3px solid var(--gold);
+    background: rgba(255,255,255,0.03);
+  }
+  .pt-en { padding: 14px 20px; color: #d4c5a0; }
+  .pt-te {
+    padding: 14px 20px;
+    border-left: 1px solid var(--col-border);
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: #c8b888;
+  }
+  .pt-en strong { display: block; font-family: 'Playfair Display', serif; font-size: 1rem; color: #e8d9b0; margin-bottom: 4px; }
+  .pt-en .num { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold); opacity: 0.5; line-height: 1; margin-bottom: 6px; }
+  .pt-te strong { display: block; font-family: 'Noto Serif Telugu', serif; font-size: 1rem; color: #e8d9b0; margin-bottom: 4px; }
+
+  /* ── SCRIPTURE ── */
+  .scripture {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid var(--col-border);
+    background: rgba(201,168,76,0.05);
+    margin: 24px 0;
+  }
+  .sc-en, .sc-te { padding: 18px 22px; }
+  .sc-te {
+    border-left: 2px solid var(--col-border);
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 0.98rem;
+    line-height: 1.9;
+    color: #c8b888;
+  }
+  .verse-ref {
+    font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 8px;
+  }
+  .sc-en blockquote, .sc-te blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #e8d9b0;
+    line-height: 1.7;
+  }
+  .sc-te blockquote { font-family: 'Noto Serif Telugu', serif; font-style: normal; }
+
+  /* ── SUB-TITLE ── */
+  .sub-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    margin: 28px 0 10px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding-bottom: 8px;
+  }
+  .sub-en {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+  }
+  .sub-te {
+    font-family: 'Noto Serif Telugu', serif;
+    font-size: 1rem;
+    color: #d4a84c;
+    padding-left: 20px;
+    border-left: 2px solid var(--col-border);
+  }
+
+  /* ── CALLOUT ── */
+  .callout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    background: linear-gradient(135deg, rgba(139,42,10,0.18), rgba(201,168,76,0.07));
+    border: 1px solid rgba(139,42,10,0.35);
+    margin: 28px 0;
+  }
+  .co-en, .co-te { padding: 20px 24px; text-align: center; }
+  .co-te { border-left: 1px solid rgba(139,42,10,0.3); font-family: 'Noto Serif Telugu', serif; font-size: 0.98rem; line-height: 1.9; }
+  .co-en p, .co-te p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: #e8d9b0;
+    font-style: italic;
+  }
+  .co-te p { font-family: 'Noto Serif Telugu', serif; font-style: normal; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    text-align: center; color: var(--gold); opacity: 0.35;
+    font-size: 1.1rem; letter-spacing: 12px; margin: 36px 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid rgba(201,168,76,0.2);
+    padding: 28px 20px; text-align: center;
+    color: var(--muted); font-size: 0.88rem; margin-top: 60px;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: #fff; color: #111; }
+    .hero { background: #f5efe0; border-bottom: 2px solid #aaa; }
+    .hero h1, .bi-header h2 { color: #4a3000; }
+    .hero h1 span, .bi-header h2.te { color: #5a4010; }
+    .col-te, .gen-te, .sc-te, .pt-te, .co-te { color: #333; }
+    .col-en, .gen-en, .sc-en, .pt-en, .co-en { color: #111; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 680px) {
+    .hero .key-verse,
+    .bi-header,
+    .split-row,
+    .genesis-header,
+    .gen-row,
+    .points li,
+    .scripture,
+    .sub-row,
+    .callout { grid-template-columns: 1fr; }
+    .bi-header .bh-te,
+    .col-te,
+    .gen-te,
+    .sc-te,
+    .pt-te,
+    .co-te,
+    .sub-te { border-left: none; border-top: 1px solid var(--col-border); padding-left: 0; margin-top: 12px; }
+    .hero .key-verse .kv-te { border-left: none; border-top: 1px solid var(--col-border); }
+    .col-en { padding-right: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-cross">✦ ✦ ✦</div>
+  <h1>The Great Commission
+    <span>గొప్ప ఆజ్ఞ</span>
+  </h1>
+  <div class="ref">Matthew 28 · మత్తయి 28 · Genesis 1–12 · ఆదికాండము 1–12</div>
+  <div class="key-verse">
+    <div class="kv-en">
+      "Go therefore and make disciples of all nations…"
+      <small>— Matthew 28:19</small>
+    </div>
+    <div class="kv-te">
+      "కాబట్టి మీరు వెళ్ళి సమస్త జనులను శిష్యులుగా చేయుడి…"
+      <small>— మత్తయి 28:19</small>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ══ INTRODUCTION ══ -->
+  <div class="bi-section">
+    <div class="bi-header">
+      <div class="bh-en">
+        <div class="section-label">Introduction</div>
+        <h2>The Setting of the Command</h2>
+      </div>
+      <div class="bh-te">
+        <div class="section-label">పరిచయం</div>
+        <h2 class="te">ఆజ్ఞ యొక్క సందర్భం</h2>
+      </div>
+    </div>
+    <div class="split-row">
+      <div class="col-en">
+        <p>Before Jesus revealed himself, he had already told his disciples to meet him in <strong>Galilee</strong>. Paul records in <strong>1 Corinthians 15</strong> that Jesus appeared to more than <strong>500 people at once</strong> — this Galilean gathering was that very occasion. Galilee was not a place of the religious elite; it was a region of ordinary people, fishermen, and working families — a reminder that God's mission is never confined to the powerful.</p>
+        <p>The eleven shared the news with others; all who heard came. Some in the crowd still doubted — they were from the wider group, not among the eleven who had walked with Jesus for three years. Doubt did not disqualify them. Jesus did not wait for perfect faith before giving his commission. He came to <em>all of them</em> and spoke with the full weight of his risen authority.</p>
+        <p>This setting matters: the Great Commission was given not in a temple or to a select council, but on an open mountain, to a mixed gathering of faith and doubt — to people just like us.</p>
+      </div>
+      <div class="col-te">
+        <p>యేసు తనను తాను ప్రత్యక్షపరచుకోవడానికి ముందే శిష్యులకు <strong>గలిలయలో</strong> కలుసుకోమని చెప్పాడు. 1 కొరింథీయులు 15లో పౌలు రాశాడు — యేసు ఒకేసారి <strong>500 మందికి పైగా</strong> కనబడ్డాడు — ఆ గలిలయ సమావేశమే అది. గలిలయ అనేది మతపెద్దల స్థలం కాదు; అది సాధారణ ప్రజలు, మత్స్యకారులు, శ్రమజీవుల ప్రాంతం — దేవుని కార్యం శక్తిమంతులకే పరిమితం కాదని చూపించే గుర్తు.</p>
+        <p>పదకొండు మంది ఆ వార్తను ఇతరులకు తెలిపారు; విన్న వారందరూ వచ్చారు. కొంతమంది సందేహించారు — వారు పెద్ద సమూహంలో ఉన్నవారు, మూడు సంవత్సరాలు యేసుతో నడిచిన పదకొండు మందిలో కాదు. సందేహం వారిని అనర్హులను చేయలేదు. యేసు పరిపూర్ణ విశ్వాసం కోసం వేచి ఉండలేదు. ఆయన <em>అందరి దగ్గరకు</em> వచ్చి తన పునరుత్థాన అధికారంతో మాట్లాడాడు.</p>
+        <p>ఈ సందర్భం ముఖ్యమైనది: గొప్ప ఆజ్ఞ దేవాలయంలో కాదు, ఎంపిక చేసిన వారికి కాదు — ఒక తెరచిన కొండమీద, విశ్వాసం మరియు సందేహం కలిసిన సమూహానికి — మనలాంటి వారికే ఇవ్వబడింది.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ══ GENESIS 1–12 SECTION ══ -->
+  <div class="genesis-section">
+    <div class="genesis-header">
+      <div>
+        <div class="section-label">Old Testament Foundation</div>
+        <h2>Genesis 1–12: The Road to the Great Commission</h2>
+      </div>
+      <div>
+        <div class="section-label">పాత నిబంధన పునాది</div>
+        <h2 class="te">ఆదికాండము 1–12: గొప్ప ఆజ్ఞకు మార్గం</h2>
+      </div>
+    </div>
+
+    <!-- Ch 1 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 1</div>
+        <ul>
+          <li>God created all things for his own glory — seven times he declared it "good," meaning good for his purpose and his praise.</li>
+          <li>He made humanity in his image (imago Dei) and gave them authority to fill the earth and rule over it as his representatives.</li>
+          <li>Creation itself was a missionary act — God filling the world with reflections of his own glory.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 1</div>
+        <ul>
+          <li>దేవుడు సమస్త సృష్టిని తన మహిమ కొరకు సృష్టించాడు — ఏడుసార్లు "మంచిది" అని చెప్పాడు, అంటే తన ఉద్దేశానికి మరియు స్తుతికి మంచిది.</li>
+          <li>మానవుడిని తన స్వరూపంలో (imago Dei) సృష్టించి, తన ప్రతినిధులుగా భూమిని నింపి ఏలమని అధికారమిచ్చాడు.</li>
+          <li>సృష్టి స్వయంగా ఒక మిషనరీ చర్య — దేవుడు ప్రపంచాన్ని తన మహిమతో నింపుతున్నాడు.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 2 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 2</div>
+        <ul>
+          <li>God desired man to enjoy rest and intimate fellowship with him — not just to serve, but to dwell in his presence.</li>
+          <li>The seventh day has no closing "evening and morning" — it remains open, an eternal invitation into God's rest and blessing.</li>
+          <li>This rest is not idleness; it is the fullness of purpose found only in God — the destiny humanity was made for.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 2</div>
+        <ul>
+          <li>దేవుడు మానవునికి విశ్రాంతి మరియు సన్నిహిత సహవాసం ఇవ్వాలని కోరుకున్నాడు — సేవ మాత్రమే కాదు, ఆయన సన్నిధిలో నివసించాలని.</li>
+          <li>ఏడవ దినానికి "అస్తమయము ఉదయము" అనే ముగింపు లేదు — అది తెరచి ఉంది, దేవుని విశ్రాంతిలో ప్రవేశించమని శాశ్వత ఆహ్వానం.</li>
+          <li>ఈ విశ్రాంతి సోమరితనం కాదు; అది దేవునిలో మాత్రమే కనబడే జీవిత పరిపూర్ణత — మానవుడు సృష్టించబడిన గమ్యం.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 3 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 3</div>
+        <ul>
+          <li>Man fell into sin — choosing his own way over God's, missing the mark of God's glory entirely.</li>
+          <li>Curse, pain, and death entered the world — yet even here, God promised that the seed of the woman would crush the serpent. The first whisper of the gospel.</li>
+          <li>The Great Commission begins in Genesis 3 — because the moment humanity fell, God's rescue mission began.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 3</div>
+        <ul>
+          <li>మానవుడు పాపంలో పడిపోయాడు — దేవుని మార్గానికి బదులు తన స్వంత మార్గం ఎంచుకుని, దేవుని మహిమను పూర్తిగా కోల్పోయాడు.</li>
+          <li>శాపం, బాధ, మరణం లోనికి వచ్చాయి — అయినా ఇక్కడే దేవుడు వాగ్దానం చేశాడు: స్త్రీ సంతానం సర్పాన్ని తొక్కివేస్తుంది. సువార్తకు మొదటి సూచన.</li>
+          <li>గొప్ప ఆజ్ఞ ఆదికాండం 3 నుండే మొదలవుతుంది — మానవుడు పడిపోయిన క్షణమే దేవుని రక్షణ కార్యం ప్రారంభమైంది.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 4 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 4</div>
+        <ul>
+          <li>Sin did not stay contained — it multiplied rapidly in the human heart, spreading from one family to all of society.</li>
+          <li>Cain killed his brother Abel out of jealousy and pride — the first murder showing how deeply sin corrupts human relationships.</li>
+          <li>Yet even then, God continued to seek humanity: "Where are you?" remains God's pursuing question through all of Scripture.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 4</div>
+        <ul>
+          <li>పాపం ఆగలేదు — అది మానవ హృదయంలో వేగంగా పెరిగింది, ఒక కుటుంబం నుండి మొత్తం సమాజానికి వ్యాపించింది.</li>
+          <li>కయీను అసూయ మరియు గర్వంతో తన సహోదరుడు హేబేలును చంపాడు — పాపం మానవ సంబంధాలను ఎంతగా చెడగొట్టిందో చూపించిన మొదటి హత్య.</li>
+          <li>అయినా అప్పటికీ దేవుడు మానవుని వెదకాడు: "నీవు ఎక్కడ ఉన్నావు?" అనే ప్రశ్న లేఖనాలన్నిటిలో దేవుని వెదకే హృదయాన్ని చూపిస్తుంది.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 5 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 5</div>
+        <ul>
+          <li>Death — the consequence of sin — spread across every generation without exception. The relentless rhythm of "and he died" is Scripture's way of showing humanity's desperate need.</li>
+          <li>Yet amid the death toll, one man stands apart: Enoch "walked with God" — a glimpse that even in fallen humanity, closeness with God was still possible.</li>
+          <li>Every death in this chapter is an argument for the need of a Saviour.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 5</div>
+        <ul>
+          <li>పాప ఫలితమైన మరణం ప్రతి తరానికి విస్తరించింది. "అతడు చనిపోయెను" అనే మాట మళ్ళీ మళ్ళీ వస్తూ మానవుని అత్యావశ్యక అవసరాన్ని చూపిస్తుంది.</li>
+          <li>అయినా ఒక వ్యక్తి వేరుగా నిలిచాడు: హనోకు "దేవునితో నడిచాడు" — పడిన మానవులలో కూడా దేవునితో సన్నిహితత సాధ్యమని అద్భుతమైన సూచన.</li>
+          <li>ఈ అధ్యాయంలోని ప్రతి మరణమూ రక్షకుని అవసరాన్ని నిరూపిస్తుంది.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 6 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 6</div>
+        <ul>
+          <li>The earth became so filled with wickedness that "every intention of the thoughts of his heart was only evil continually" — humanity had reached its lowest point.</li>
+          <li>God's heart was grieved — showing that judgment is never cold; it flows from a heart that loves what sin destroys.</li>
+          <li>Yet God chose Noah — not because Noah was perfect, but because of divine grace. Salvation has always been by grace, not merit.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 6</div>
+        <ul>
+          <li>భూమి దుర్మార్గంతో నిండిపోయింది — "మానవుని మనసు యొక్క ప్రతి ఆలోచన నిరంతరం చెడ్డది మాత్రమే" — మానవత్వం అత్యంత అధముడైన స్థితికి చేరింది.</li>
+          <li>దేవుని హృదయం దుఃఖించింది — తీర్పు ఎప్పుడూ చల్లగా ఉండదు; పాపం నాశనం చేసే వాటిని ప్రేమించే హృదయం నుండి అది వస్తుంది.</li>
+          <li>అయినా దేవుడు నోవహును ఎంచుకున్నాడు — నోవహు సంపూర్ణుడైన కారణంగా కాదు, దైవిక కృప వల్ల. రక్షణ ఎల్లప్పుడూ కృపచేత, అర్హత వల్ల కాదు.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 7 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 7</div>
+        <ul>
+          <li>God brought judgment through the flood — a righteous response to a world that had completely abandoned him. Sin always carries consequences.</li>
+          <li>Noah's family was saved inside the ark — a picture of salvation through the provision of God alone. They did not save themselves; they entered what God had prepared.</li>
+          <li>The flood is not the end of humanity's story — it is a reset, a new beginning built on grace.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 7</div>
+        <ul>
+          <li>దేవుడు ప్రళయం ద్వారా తీర్పు తీర్చాడు — తనను పూర్తిగా వదిలిన ప్రపంచానికి నీతియుక్త ప్రతిస్పందన. పాపం ఎల్లప్పుడూ పరిణామాలను మోస్తుంది.</li>
+          <li>నోవహు కుటుంబం నావ లోపల రక్షించబడింది — దేవుని ఏర్పాటు మాత్రమే రక్షణ ఇస్తుందని చూపించే చిత్రం. వారు తమను తాము రక్షించుకోలేదు; దేవుడు సిద్ధపరచినదిలో ప్రవేశించారు.</li>
+          <li>ప్రళయం మానవత్వపు కథ యొక్క అంతం కాదు — అది కృప మీద నిర్మించిన కొత్త ఆరంభం.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 8 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 8</div>
+        <ul>
+          <li>God remembered Noah — a profound phrase showing that God never forgets those in his care, even in the midst of the storm.</li>
+          <li>God gave a new beginning after the flood — the waters recede, dry land appears, and life starts again. Every new beginning in Scripture points forward to the ultimate renewal.</li>
+          <li>Noah's first act on dry ground was worship — building an altar. When God saves, the natural response is praise.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 8</div>
+        <ul>
+          <li>దేవుడు నోవహును జ్ఞాపకం చేసుకున్నాడు — తన శ్రద్ధలో ఉన్న వారిని దేవుడు ఎప్పుడూ మర్చిపోడని చూపించే లోతైన మాట, తుఫాను మధ్యలో కూడా.</li>
+          <li>ప్రళయం తర్వాత దేవుడు కొత్త ఆరంభాన్ని ఇచ్చాడు — నీళ్ళు తగ్గాయి, పొడి నేల కనిపించింది, జీవితం మళ్ళీ మొదలైంది. లేఖనాలలోని ప్రతి కొత్త ఆరంభమూ అంతిమ నవీకరణ వైపు చూపిస్తుంది.</li>
+          <li>నోవహు పొడి నేల మీద చేసిన మొదటి పని ఆరాధన — బలిపీఠం కట్టడం. దేవుడు రక్షించినప్పుడు, సహజ ప్రతిస్పందన స్తుతి.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 9 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 9</div>
+        <ul>
+          <li>God made a covenant with Noah — and with all living creatures. This was not just a promise to one man; it was a statement of God's commitment to the whole created order.</li>
+          <li>The rainbow stands as a permanent sign of his grace — every rainbow since is a reminder that God keeps his word, even when humanity does not keep theirs.</li>
+          <li>God repeated the original commission: "Be fruitful and multiply and fill the earth" — showing that his missionary purpose for humanity had not changed.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 9</div>
+        <ul>
+          <li>దేవుడు నోవహుతో నిబంధన చేశాడు — మరియు సమస్త జీవులతో. ఇది ఒక మనిషికి మాత్రమే వాగ్దానం కాదు; సమస్త సృష్టి పట్ల దేవుని నిబద్ధత ప్రకటన.</li>
+          <li>ఇంద్రధనుస్సు కృపకు శాశ్వత సూచికగా నిలిచింది — అప్పటి నుండి ప్రతి ఇంద్రధనుస్సూ దేవుడు తన మాటను నిలబెట్టుకుంటాడని గుర్తు చేస్తుంది.</li>
+          <li>దేవుడు మళ్ళీ మొదటి ఆజ్ఞను పునరావృతం చేశాడు: "సంతానోత్పత్తి చేయుడి, విస్తరించుడి, భూమిని నింపుడి" — మానవుని పట్ల ఆయన మిషనరీ ఉద్దేశం మారలేదు.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 10 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 10</div>
+        <ul>
+          <li>Through Noah's descendants, nations and peoples spread across the entire earth — each with their own language, territory, and culture. God is the God of all of them.</li>
+          <li>Approximately 70 nations are recorded — the world God would reach. This is the very world Matthew 28 commands us to go into.</li>
+          <li>The table of nations shows that diversity is not an accident — God designed a world of peoples and languages so that his glory could be reflected in every tongue and tribe.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 10</div>
+        <ul>
+          <li>నోవహు సంతానం ద్వారా జనములు, జాతులు భూమిమీద విస్తరించాయి — ఒక్కొక్కటి తమ భాష, భూభాగం, సంస్కృతితో. దేవుడు వారందరి దేవుడు.</li>
+          <li>సుమారు 70 జాతుల విభజన కనిపిస్తుంది — దేవుడు చేరాలనుకున్న ప్రపంచం. మత్తయి 28లో మనం వెళ్ళమని ఆదేశించబడిన ప్రపంచమే ఇది.</li>
+          <li>జాతుల జాబితా వైవిధ్యం యాదృచ్చికం కాదని చూపిస్తుంది — ప్రతి నాలుకలో, ప్రతి తెగలో ఆయన మహిమ ప్రతిఫలించేలా దేవుడు ప్రజలు మరియు భాషల ప్రపంచాన్ని రూపొందించాడు.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 11 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 11 — Babel</div>
+        <ul>
+          <li>Humanity sought its own glory, building a tower to the heavens — "Let us make a name for ourselves." United in ambition, but united in rebellion against God's purpose.</li>
+          <li>God confused the languages and scattered the nations — not as punishment alone, but to prevent fallen humanity from entrenching its rebellion further, and to prepare for redemption.</li>
+          <li>What looks like judgment is also mercy: scattered peoples become the very nations that Abraham's calling was designed to bless. God turns the consequences of sin into the canvas of his salvation plan.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 11 — బాబేలు</div>
+        <ul>
+          <li>మానవుడు తన మహిమ కోసం బాబేలు గోపురం కట్టాలని తలంచాడు — "మనకు పేరు చేసుకుందాం." ఆశయంలో ఐక్యంగా ఉన్నారు, కానీ దేవుని ఉద్దేశానికి వ్యతిరేకంగా తిరుగుబాటులో.</li>
+          <li>దేవుడు భాషలను తారుమారు చేసి జనములను చెదరగొట్టాడు — కేవలం శిక్ష మాత్రమే కాదు, పడిన మానవత్వం తన తిరుగుబాటును మరింత బలపరుచుకోకుండా నిరోధించడానికి మరియు విమోచన కొరకు సిద్ధం చేయడానికి.</li>
+          <li>తీర్పు వలె కనిపించేది కరుణ కూడా: చెదరిన ప్రజలే అబ్రహాము పిలుపు ఆశీర్వదించాల్సిన జాతులు అవుతారు. దేవుడు పాప పరిణామాలను తన రక్షణ పథకం కోసం వేదికగా మారుస్తాడు.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ch 12 -->
+    <div class="gen-row">
+      <div class="gen-en">
+        <div class="gen-chapter">Genesis 12 — Abraham</div>
+        <ul>
+          <li>God called Abraham out of the nations — a pagan man from Ur of the Chaldees — showing that his grace reaches across every cultural and religious boundary.</li>
+          <li>"In you all the families of the earth shall be blessed" — this is the Great Commission in seed form. Every nation in Genesis 10 is included in this promise.</li>
+          <li>Abraham's call is the hinge of history: from this point, every page of Scripture moves toward the fulfilment of this promise — through Israel, through Christ, and through the Church going to all nations.</li>
+        </ul>
+      </div>
+      <div class="gen-te">
+        <div class="gen-chapter">ఆదికాండము 12 — అబ్రాహాము</div>
+        <ul>
+          <li>దేవుడు అబ్రాహామును జనముల నుండి పిలిచాడు — కల్దీయుల ఊరు నుండి ఒక అన్యమత వ్యక్తిని — ఆయన కృప ప్రతి సాంస్కృతిక మరియు మతపరమైన సరిహద్దును దాటుతుందని చూపిస్తూ.</li>
+          <li>"నీ ద్వారా భూమి సమస్త వంశాలు ఆశీర్వదించబడతాయి" — ఇది విత్తనరూపంలో గొప్ప ఆజ్ఞ. ఆదికాండం 10లోని ప్రతి జాతి ఈ వాగ్దానంలో చేర్చబడింది.</li>
+          <li>అబ్రాహాము పిలుపు చరిత్ర యొక్క కీలక సంఘటన: ఈ సమయం నుండి లేఖనాల ప్రతి పుటా ఈ వాగ్దాన నెరవేర్పు వైపు సాగుతుంది — ఇశ్రాయేలు ద్వారా, క్రీస్తు ద్వారా, మరియు సమస్త జాతులకు వెళ్ళే సంఘం ద్వారా.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /genesis-section -->
+
+  <div class="divider">· · ·</div>
+
+  <!-- ══ PART 1: DIVINE DESIRE ══ -->
+  <div class="bi-section">
+    <div class="bi-header">
+      <div class="bh-en">
+        <div class="section-label">Part One</div>
+        <h2>God's Divine Desire for Humanity</h2>
+      </div>
+      <div class="bh-te">
+        <div class="section-label">భాగం ఒకటి</div>
+        <h2 class="te">మానవుని పట్ల దేవుని అభిలాష</h2>
+      </div>
+    </div>
+    <div class="split-row">
+      <div class="col-en">
+        <p>To understand the Great Commission, we must trace it to the beginning of Scripture. As one teacher said: <em>"Without Genesis 1:1, you cannot have Matthew 28:19–20."</em> The commission Jesus gives at the end of Matthew is not a sudden new instruction — it is the fullness of what God purposed from the very first moment of creation.</p>
+        <p>God's original desire in three points — each one lost through the Fall, each one restored through Christ:</p>
+      </div>
+      <div class="col-te">
+        <p>గొప్ప ఆజ్ఞను అర్థం చేసుకోవడానికి లేఖన ప్రారంభం వరకు వెళ్ళాలి. "ఆదికాండం 1:1 లేకుండా మత్తయి 28:19–20 ఉండదు." మత్తయి చివరిలో యేసు ఇచ్చే ఆజ్ఞ అకస్మాత్తుగా వచ్చిన కొత్త ఆదేశం కాదు — ఇది సృష్టి మొదటి క్షణం నుండే దేవుడు ఉద్దేశించినది యొక్క పరిపూర్ణత.</p>
+        <p>దేవుని ఆది అభిలాష మూడు విషయాలలో — ప్రతి ఒక్కటి పతనం వల్ల కోల్పోబడింది, ప్రతి ఒక్కటి క్రీస్తు ద్వారా పునరుద్ధరించబడింది:</p>
+      </div>
+    </div>
+
+    <ul class="points">
+      <li>
+        <div class="pt-en"><div class="num">1</div><strong>God Made All Things for His Glory</strong>Isaiah 43:7 — "I have created for my glory." Romans 11:36 — all things are unto him. Seven times in Genesis 1 God said "it is good" — good for his glory. Everything from the stars to the sparrow was made to display who God is. This means human life, at its deepest level, finds meaning only when it is lived for God's glory.</div>
+        <div class="pt-te"><strong>దేవుడు సమస్తమును తన మహిమ కొరకు సృష్టించాడు</strong>యెషయా 43:7 — "నా మహిమ నిమిత్తము నేను సృష్టించెను." రోమీయులు 11:36 — సమస్తమూ ఆయన నిమిత్తమే. ఆదికాండం 1లో ఏడుసార్లు "మంచిగా ఉంది" అని చెప్పాడు — తన మహిమకు మంచిది అని అర్థం. నక్షత్రాల నుండి పక్షి వరకు సమస్తమూ దేవుడు ఎవరో చూపించడానికి సృష్టించబడింది. దీని అర్థం మానవ జీవితం, లోతైన స్థాయిలో, దేవుని మహిమ కొరకు జీవించినప్పుడు మాత్రమే అర్థం పొందుతుంది.</div>
+      </li>
+      <li>
+        <div class="pt-en"><div class="num">2</div><strong>God Wanted Man to Rule as His Regent</strong>Genesis 1 — "Fill the earth and rule over it." Humanity was God's representative, exercising his authority over all creation. We were not created to serve ourselves or build our own kingdoms — we were made to extend God's rule and reflect his character across the whole earth. This is the original missionary mandate.</div>
+        <div class="pt-te"><strong>మానవుడు దేవుని ప్రతినిధిగా భూమిని ఏలాలని</strong>ఆదికాండం 1 — "భూమిని నింపి దాన్ని ఏలుడి." మానవుడు దేవుని ప్రతినిధిగా సమస్త సృష్టిమీద అధికారం చేయాలి. మనం మన కొరకు సేవ చేయడానికి లేదా మన స్వంత రాజ్యాలు నిర్మించడానికి సృష్టించబడలేదు — మనం దేవుని పరిపాలనను విస్తరించడానికి మరియు ఆయన స్వభావాన్ని భూమిమీద ప్రతిఫలించడానికి తయారుచేయబడ్డాం. ఇది మూలమైన మిషనరీ ఆదేశం.</div>
+      </li>
+      <li>
+        <div class="pt-en"><div class="num">3</div><strong>God Wanted Man to Enter His Rest</strong>Genesis 2:1–3 — the seventh day has no closing "evening and morning." It remains open — an eternal invitation to enter God's rest and be blessed. This rest is not the end of work, but the beginning of life lived from a place of peace with God — work done not to earn favour but from the security of being loved. The Great Commission flows from this rest.</div>
+        <div class="pt-te"><strong>మానవుడు దేవుని విశ్రాంతిలో ప్రవేశించాలని</strong>ఆదికాండం 2:1–3 — ఏడవ దినానికి "అస్తమయము ఉదయము" అనే ముగింపు లేదు. అది తెరచి ఉంది — విశ్రాంతిలో ప్రవేశించమని శాశ్వత ఆహ్వానం. ఈ విశ్రాంతి పని ముగింపు కాదు, దేవునితో శాంతి నుండి జీవించే జీవితపు ప్రారంభం — అనుకూలత సంపాదించడానికి కాదు, ప్రేమించబడిన భద్రత నుండి చేసే సేవ. గొప్ప ఆజ్ఞ ఈ విశ్రాంతి నుండే ప్రవహిస్తుంది.</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ══ PART 2: HUMAN FAILURE ══ -->
+  <div class="bi-section">
+    <div class="bi-header">
+      <div class="bh-en">
+        <div class="section-label">Part Two</div>
+        <h2>Human Failure — Missing the Mark</h2>
+      </div>
+      <div class="bh-te">
+        <div class="section-label">భాగం రెండు</div>
+        <h2 class="te">మానవుని వైఫల్యం — లక్ష్యం తప్పిపోవడం</h2>
+      </div>
+    </div>
+
+    <div class="sub-row">
+      <div class="sub-en">What Does "Sin" Mean?</div>
+      <div class="sub-te">పాపం అంటే ఏమిటి?</div>
+    </div>
+    <div class="split-row">
+      <div class="col-en">
+        <p>The Greek word for sin literally means <strong>"missing the mark"</strong> — like an arrow that misses its target. God created us for his glory; sin is turning away from that purpose entirely. It is not merely breaking rules — it is a fundamental misdirection of the whole person, away from the God we were made to glorify and toward ourselves.</p>
+        <p>Every generation after the Fall repeated this failure. The <strong>Tower of Babel</strong> (Genesis 11) is the clearest example — humanity united in rebellion, building to make a name for themselves. They had the strength to cooperate, but used it to magnify themselves instead of God. United gifting, misdirected purpose.</p>
+      </div>
+      <div class="col-te">
+        <p>పాపం అనే పదానికి అర్థం <strong>"గురి తప్పిపోవడం"</strong> — బాణం గురి తప్పినట్లు. దేవుడు మనలను తన మహిమ కొరకు సృష్టించాడు; పాపం ఆ లక్ష్యాన్ని పూర్తిగా వదిలివేయడం. ఇది కేవలం నియమాలు అతిక్రమించడం మాత్రమే కాదు — ఇది మనం మహిమపరచడానికి సృష్టించబడిన దేవుని నుండి తిరగి, మన వైపు మళ్ళడం.</p>
+        <p>పతనం తర్వాత ప్రతి తరమూ ఈ వైఫల్యాన్ని పునరావృతం చేసింది. <strong>బాబేలు గోపురం</strong> (ఆదికాండం 11) — మానవులు ఐక్యంగా తమ పేరు కొరకు గోపురం కట్టాలని తిరుగుబాటు చేశారు. వారికి సహకరించే శక్తి ఉంది, కానీ దేవుని బదులు తమను తాము గొప్పచేసుకోవడానికి ఉపయోగించారు. ఐక్యమైన వరాలు, తప్పుదోవ పట్టిన ఉద్దేశం.</p>
+      </div>
+    </div>
+
+    <div class="scripture">
+      <div class="sc-en">
+        <div class="verse-ref">Romans 3:23</div>
+        <blockquote>"For all have sinned and fall short of the glory of God."</blockquote>
+      </div>
+      <div class="sc-te">
+        <div class="verse-ref">రోమీయులు 3:23</div>
+        <blockquote>"అందరూ పాపము చేసి దేవుని మహిమను పొందలేకపోయారు."</blockquote>
+      </div>
+    </div>
+
+    <div class="sub-row">
+      <div class="sub-en">Babel: Division as Part of Redemption</div>
+      <div class="sub-te">బాబేలు: విభజన విమోచన కార్యంలో భాగం</div>
+    </div>
+    <div class="split-row">
+      <div class="col-en">
+        <p>God confusing the languages was not only punishment — it was <strong>part of God's redemptive mission</strong>. United humanity was united in rebellion. By dividing them into <strong>~70 nations</strong>, God set the stage for blessing to reach every people group. Division became the doorway through which Abraham's promise would eventually flow to all nations. What looked like wrath was also wisdom — scattering the rebellion so that grace could find a way in.</p>
+      </div>
+      <div class="col-te">
+        <p>దేవుడు భాషలను తారుమారు చేయడం కేవలం శిక్ష మాత్రమే కాదు — అది <strong>దేవుని విమోచన కార్యంలో భాగం</strong>. ఐక్య మానవత్వం దేవునికి వ్యతిరేకంగా ఐక్యంగా ఉంది. <strong>~70 జాతులుగా</strong> విభజించడం ద్వారా, ప్రతి జనసమూహానికి ఆశీర్వాదం చేరడానికి దేవుడు వేదిక సిద్ధం చేశాడు. విభజన అబ్రహాము వాగ్దానం అన్ని జాతులకు చేరే ద్వారం అయింది. కోపంలా కనిపించేది జ్ఞానం కూడా — తిరుగుబాటును చెదరగొట్టి కృప మార్గం కనుగొనేలా.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="co-en"><p>"When man unites in rebellion, God divides — so that through one chosen people, all nations might be blessed."</p></div>
+      <div class="co-te"><p>"మానవుడు తిరుగుబాటులో ఏకమైనప్పుడు, దేవుడు విభజిస్తాడు — ఒక ఏర్పరచుకున్న ప్రజల ద్వారా సమస్త జాతులు ఆశీర్వదించబడడానికి."</p></div>
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ══ PART 3: DIVINE SOLUTION ══ -->
+  <div class="bi-section">
+    <div class="bi-header">
+      <div class="bh-en">
+        <div class="section-label">Part Three</div>
+        <h2>The Divine Solution — One Man, All Nations</h2>
+      </div>
+      <div class="bh-te">
+        <div class="section-label">భాగం మూడు</div>
+        <h2 class="te">దైవిక పరిష్కారం — ఒక మనిషి, సమస్త జాతులు</h2>
+      </div>
+    </div>
+
+    <div class="scripture">
+      <div class="sc-en">
+        <div class="verse-ref">Genesis 12:1–3</div>
+        <blockquote>"Go from your country… I will make of you a great nation… and in you all the families of the earth shall be blessed."</blockquote>
+      </div>
+      <div class="sc-te">
+        <div class="verse-ref">ఆదికాండము 12:1–3</div>
+        <blockquote>"నీ దేశమును… విడిచిపో… నిన్ను గొప్ప జాతిగా చేస్తాను… నీలో భూమి యొక్క సమస్త వంశాలు ఆశీర్వదించబడతాయి."</blockquote>
+      </div>
+    </div>
+
+    <div class="split-row">
+      <div class="col-en">
+        <p>Abraham's name means <strong>"Father of Many Nations."</strong> In Genesis 10, God divided humanity into nations. In Genesis 12, God chose one man to be father of those same nations. The Great Commission is embedded in Abraham's very name. Long before Jesus spoke on that Galilean mountain, God had already announced his intention: every family, every people, every tongue would receive the blessing that began with one man walking in faith.</p>
+        <p>This is the thread that runs through all of Scripture — from the garden to the cross, from the scattered nations at Babel to the gathered nations at the throne of God in Revelation 7.</p>
+      </div>
+      <div class="col-te">
+        <p>అబ్రహాము పేరు అర్థం <strong>"అనేక జాతులకు తండ్రి."</strong> ఆదికాండం 10లో దేవుడు మానవులను జాతులుగా విభజించాడు. ఆదికాండం 12లో ఆయన ఒక వ్యక్తిని ఆ జాతులకే తండ్రిగా ఎంచుకున్నాడు. గొప్ప ఆజ్ఞ అబ్రహాము పేరులోనే పొందుపరచబడింది. యేసు గలిలయ కొండ మీద మాట్లాడే చాలా ముందే, దేవుడు తన ఉద్దేశాన్ని ప్రకటించాడు: ప్రతి కుటుంబం, ప్రతి జనసమూహం, ప్రతి నాలుక విశ్వాసంలో నడిచిన ఒక వ్యక్తితో ప్రారంభమైన ఆశీర్వాదాన్ని పొందుతుంది.</p>
+        <p>ఇది సమస్త లేఖనాలలో పాకే సూత్రం — తోటనుండి సిలువ వరకు, బాబేలులో చెదరిన జాతుల నుండి ప్రకటన 7లో దేవుని సింహాసనం వద్ద కూడిన జాతుల వరకు.</p>
+      </div>
+    </div>
+
+    <ul class="points">
+      <li>
+        <div class="pt-en"><div class="num">✦</div><strong>Genesis 10</strong>God divides humanity into ~70 nations and language groups. Far from being a story of chaos, this is God cataloguing the very peoples he intends to bless — a divine census of those for whom the Great Commission would one day be given.</div>
+        <div class="pt-te"><strong>ఆదికాండము 10</strong>దేవుడు మానవులను ~70 జాతులు మరియు భాష సమూహాలుగా విభజించాడు. ఇది అశాంతి కథ కాదు — ఇది దేవుడు ఆశీర్వదించాలనుకున్న ప్రజలను జాబితా చేయడం — గొప్ప ఆజ్ఞ ఒక రోజు వారి కొరకే ఇవ్వబడుతుందని దైవిక జనాభా లెక్కింపు.</div>
+      </li>
+      <li>
+        <div class="pt-en"><div class="num">✦</div><strong>Genesis 12</strong>God chooses Abraham — father of many nations — to bless all those divided nations. One man, called by grace, becomes the channel through which God's redemptive love flows to the entire world. God did not need a crowd; he started with one willing heart.</div>
+        <div class="pt-te"><strong>ఆదికాండము 12</strong>దేవుడు అబ్రహామును ఎంచుకున్నాడు — అనేక జాతులకు తండ్రిగా — ఆ అన్ని జాతులను ఆశీర్వదించడానికి. కృపచేత పిలువబడిన ఒక వ్యక్తి, దేవుని విమోచన ప్రేమ మొత్తం ప్రపంచానికి పారే మార్గం అవుతాడు. దేవునికి జనసమూహం అవసరం లేదు; ఆయన ఒక సిద్ధమైన హృదయంతో ప్రారంభించాడు.</div>
+      </li>
+      <li>
+        <div class="pt-en"><div class="num">✦</div><strong>Matthew 28:19–20</strong>Through Christ, the commission is complete: "Go and make disciples of all nations." The promise made to Abraham — that all nations would be blessed through him — is fulfilled in Jesus, the true seed of Abraham. We are now the messengers of that fulfilment.</div>
+        <div class="pt-te"><strong>మత్తయి 28:19–20</strong>క్రీస్తు ద్వారా ఆజ్ఞ నెరవేరింది: "వెళ్ళి సమస్త జనులను శిష్యులుగా చేయుడి." అబ్రహామునకు చేసిన వాగ్దానం — అన్ని జాతులు అతని ద్వారా ఆశీర్వదించబడతాయని — అబ్రహాము నిజమైన సంతానమైన యేసులో నెరవేరింది. మనం ఇప్పుడు ఆ నెరవేర్పు యొక్క దూతలం.</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ══ CONCLUSION ══ -->
+  <div class="bi-section">
+    <div class="bi-header">
+      <div class="bh-en">
+        <div class="section-label">Conclusion</div>
+        <h2>The Great Commission — The Thread of All Scripture</h2>
+      </div>
+      <div class="bh-te">
+        <div class="section-label">ముగింపు</div>
+        <h2 class="te">గొప్ప ఆజ్ఞ — సమస్త లేఖనాల సూత్రం</h2>
+      </div>
+    </div>
+
+    <div class="split-row">
+      <div class="col-en">
+        <p>God <strong>created</strong> all things for his glory. Man <strong>fell</strong> and missed that glory. God <strong>divided</strong> the nations at Babel. God <strong>chose</strong> Abraham to bless all nations. God <strong>sent</strong> his Son — who lived the life we could not live, died the death we deserved, rose in the power of indestructible life, and now commands us:</p>
+        <p>This is no isolated command — it is the climax of a story told across every page of Scripture. Every nation, every language, every tribe scattered at Babel was already in God's heart when he said to Abraham: "In you all the families of the earth shall be blessed."</p>
+      </div>
+      <div class="col-te">
+        <p>దేవుడు సమస్తమును తన మహిమ కొరకు <strong>సృష్టించాడు</strong>. మానవుడు పాపంలో <strong>పడిపోయాడు</strong>. దేవుడు బాబేలులో జాతులను <strong>విభజించాడు</strong>. అబ్రహామును సమస్త జాతులను ఆశీర్వదించడానికి <strong>ఎంచుకున్నాడు</strong>. తన కుమారుని <strong>పంపించాడు</strong> — మనం జీవించలేకపోయిన జీవితం జీవించాడు, మనం పొందవలసిన మరణం చనిపోయాడు, నాశనం చేయలేని జీవశక్తిలో లేచాడు — ఆయన ఇప్పుడు మనలను ఆజ్ఞాపిస్తున్నాడు:</p>
+        <p>ఇది వేరుపడిన ఆజ్ఞ కాదు — ఇది లేఖనాల ప్రతి పుటలో చెప్పబడిన కథ యొక్క పరాకాష్ఠ. బాబేలులో చెదరిన ప్రతి జాతి, ప్రతి భాష, ప్రతి తెగ అబ్రహామునకు "నీలో భూమి సమస్త వంశాలు ఆశీర్వదించబడతాయి" అని చెప్పిన క్షణమే దేవుని హృదయంలో ఉంది.</p>
+      </div>
+    </div>
+
+    <div class="scripture">
+      <div class="sc-en">
+        <div class="verse-ref">Matthew 28:19–20</div>
+        <blockquote>"Go therefore and make disciples of all nations, baptising them in the name of the Father and of the Son and of the Holy Spirit… And behold, I am with you always, to the end of the age."</blockquote>
+      </div>
+      <div class="sc-te">
+        <div class="verse-ref">మత్తయి 28:19–20</div>
+        <blockquote>"కాబట్టి మీరు వెళ్ళి సమస్త జనులను శిష్యులుగా చేయుడి, తండ్రి, కుమారుడు, పరిశుద్ధాత్మ నామంలో బాప్తిస్మం ఇయ్యుడి… నేను యుగాంతమువరకు మీతో ఉంటాను."</blockquote>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="co-en"><p>The Great Commission is not a new idea. It is God's ancient heart — spoken plainly at last by his Son. We are not just obeying a command; we are completing the story that began in Genesis 1:1.</p></div>
+      <div class="co-te"><p>గొప్ప ఆజ్ఞ కొత్త ఆలోచన కాదు. అది దేవుని శాశ్వత హృదయం — చివరకు ఆయన కుమారుడు స్పష్టంగా చెప్పిన మాట. మనం కేవలం ఆజ్ఞను పాటించడం మాత్రమే కాదు; ఆదికాండం 1:1 నుండి ప్రారంభమైన కథను పూర్తి చేస్తున్నాం.</p></div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <div>Sermon Notes · Matthew 28 — The Great Commission · Genesis 1–12 · మత్తయి 28 — గొప్ప ఆజ్ఞ</div>
+</footer>
+
+</body>
+</html>
